@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "plugin_id": "your-plugin-id",
+  "name": "插件名称",
+  "version": "0.1.0",
+  "description": "一句话描述插件解决什么问题。",
+  "summary": "更适合市场列表展示的短摘要。",
+  "category": "general",
+  "source": "community-market",
+  "icon": "Grid",
+  "author": "Author Name",
+  "publisher": {
+    "name": "publisher-id",
+    "url": "https://publisher.example.com",
+    "verified": false
+  },
+  "official": false,
+  "verified": false,
+  "featured": false,
+  "builtin": false,
+  "homepage": "https://plugin.example.com",
+  "docs_url": "https://plugin.example.com/docs",
+  "repo_url": "https://github.com/owner/repo",
+  "support_url": "https://github.com/owner/repo/discussions",
+  "issues_url": "https://github.com/owner/repo/issues",
+  "license": "MIT",
+  "pricing": "free",
+  "source_repo": "https://github.com/owner/repo",
+  "keywords": ["keyword-1", "keyword-2"],
+  "tags": ["tag-1", "tag-2"],
+  "features": ["feature-1", "feature-2"],
+  "capabilities": ["capability-1", "capability-2"],
+  "permissions": ["network", "article_content"],
+  "compatibility": {
+    "backend": "fastapi",
+    "frontend": "vue",
+    "min_app_version": "1.0.0",
+    "max_app_version": ""
+  },
+  "delivery": {
+    "type": "catalog",
+    "entry_mode": "local",
+    "install_strategy": "catalog",
+    "runtime_type": "catalog",
+    "entry_url": ""
+  }
+}

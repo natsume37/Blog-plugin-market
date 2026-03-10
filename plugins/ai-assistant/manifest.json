@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "plugin_id": "ai-assistant",
+  "name": "AI 助手",
+  "version": "1.0.0",
+  "description": "为文章编辑流程提供 AI 草稿、摘要生成和 MCP 工具能力。",
+  "summary": "文章生成、摘要生成和工具编排的一站式 AI 插件。",
+  "category": "automation",
+  "source": "official-market",
+  "icon": "MagicStick",
+  "author": "Martin",
+  "publisher": {
+    "name": "natsume37",
+    "url": "https://martin88.xyz",
+    "verified": true
+  },
+  "official": true,
+  "verified": true,
+  "featured": true,
+  "builtin": true,
+  "homepage": "https://martin88.xyz",
+  "docs_url": "https://github.com/natsume37/Blog-plugin-market/tree/main/plugins/ai-assistant",
+  "repo_url": "https://github.com/natsume37/Blog-backend",
+  "support_url": "https://github.com/natsume37/Blog-backend/issues",
+  "issues_url": "https://github.com/natsume37/Blog-backend/issues",
+  "license": "MIT",
+  "pricing": "free",
+  "source_repo": "https://github.com/natsume37/Blog-plugin-market",
+  "keywords": ["ai", "draft", "summary", "mcp", "editor"],
+  "tags": ["automation", "editor", "official"],
+  "features": ["AI 草稿", "AI 摘要", "MCP 工具", "模型配置"],
+  "capabilities": ["article_draft", "article_summary", "mcp_tools", "model_settings"],
+  "permissions": ["network", "site_settings"],
+  "compatibility": {
+    "backend": "fastapi",
+    "frontend": "vue",
+    "min_app_version": "1.0.0",
+    "max_app_version": ""
+  },
+  "delivery": {
+    "type": "builtin",
+    "entry_mode": "local",
+    "install_strategy": "builtin-toggle",
+    "runtime_type": "builtin",
+    "entry_url": ""
+  }
+}

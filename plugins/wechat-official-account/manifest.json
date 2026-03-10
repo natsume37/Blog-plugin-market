@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "plugin_id": "wechat-official-account",
+  "name": "微信公众号发布",
+  "version": "1.0.0",
+  "description": "将博客文章同步到微信公众号草稿箱，并支持直接发起发布。",
+  "summary": "适合内容分发场景的公众号发布插件。",
+  "category": "distribution",
+  "source": "official-market",
+  "icon": "Promotion",
+  "author": "Martin",
+  "publisher": {
+    "name": "natsume37",
+    "url": "https://martin88.xyz",
+    "verified": true
+  },
+  "official": true,
+  "verified": true,
+  "featured": true,
+  "builtin": true,
+  "homepage": "https://martin88.xyz",
+  "docs_url": "https://github.com/natsume37/Blog-plugin-market/tree/main/plugins/wechat-official-account",
+  "repo_url": "https://github.com/natsume37/Blog-backend",
+  "support_url": "https://github.com/natsume37/Blog-backend/issues",
+  "issues_url": "https://github.com/natsume37/Blog-backend/issues",
+  "license": "MIT",
+  "pricing": "free",
+  "source_repo": "https://github.com/natsume37/Blog-plugin-market",
+  "keywords": ["wechat", "distribution", "publish", "social"],
+  "tags": ["distribution", "social", "official"],
+  "features": ["草稿上传", "公众号发布", "封面同步", "发布状态查询"],
+  "capabilities": ["wechat_draft", "wechat_publish", "wechat_publish_status"],
+  "permissions": ["network", "article_content", "plugin_settings"],
+  "compatibility": {
+    "backend": "fastapi",
+    "frontend": "vue",
+    "min_app_version": "1.0.0",
+    "max_app_version": ""
+  },
+  "delivery": {
+    "type": "builtin",
+    "entry_mode": "local",
+    "install_strategy": "builtin-toggle",
+    "runtime_type": "builtin",
+    "entry_url": ""
+  }
+}

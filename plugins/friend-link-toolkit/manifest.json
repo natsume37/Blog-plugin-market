@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "plugin_id": "friend-link-toolkit",
+  "name": "友链工具箱",
+  "version": "0.1.0",
+  "description": "用于友链申请资料抽取、字段标准化和后续审核流编排的工具包条目。",
+  "summary": "面向友链场景的资料抽取和工作流工具集。",
+  "category": "tools",
+  "source": "official-market",
+  "icon": "Connection",
+  "author": "Martin",
+  "publisher": {
+    "name": "natsume37",
+    "url": "https://martin88.xyz",
+    "verified": true
+  },
+  "official": true,
+  "verified": true,
+  "featured": false,
+  "builtin": false,
+  "homepage": "https://github.com/natsume37/Blog-plugin-market",
+  "docs_url": "https://github.com/natsume37/Blog-plugin-market/tree/main/plugins/friend-link-toolkit",
+  "repo_url": "https://github.com/natsume37/Blog-plugin-market",
+  "support_url": "https://github.com/natsume37/Blog-plugin-market/issues",
+  "issues_url": "https://github.com/natsume37/Blog-plugin-market/issues",
+  "license": "MIT",
+  "pricing": "free",
+  "source_repo": "https://github.com/natsume37/Blog-plugin-market",
+  "keywords": ["friend-link", "tooling", "workflow"],
+  "tags": ["tools", "workflow", "official"],
+  "features": ["资料抽取", "字段标准化", "审核工作流"],
+  "capabilities": ["friend_link_parse", "friend_link_review"],
+  "permissions": ["friend_link_content", "network"],
+  "compatibility": {
+    "backend": "fastapi",
+    "frontend": "vue",
+    "min_app_version": "1.0.0",
+    "max_app_version": ""
+  },
+  "delivery": {
+    "type": "catalog",
+    "entry_mode": "external",
+    "install_strategy": "manual",
+    "runtime_type": "catalog",
+    "entry_url": "https://github.com/natsume37/Blog-plugin-market/tree/main/plugins/friend-link-toolkit"
+  }
+}
