@@ -2,9 +2,9 @@
   "schema_version": 1,
   "plugin_id": "ai-assistant",
   "name": "AI 助手",
-  "version": "1.0.0",
-  "description": "为文章编辑流程提供 AI 草稿、摘要生成和 MCP 工具能力。",
-  "summary": "文章生成、摘要生成和工具编排的一站式 AI 插件。",
+  "version": "1.2.0",
+  "description": "统一管理文本与图片生成能力，为后台编辑流程提供草稿、摘要、AI 生图和 MCP 工具能力。",
+  "summary": "文本生成、图片生成、工具编排与模型配置的一体化 AI 插件。",
   "category": "automation",
   "source": "official-market",
   "icon": "MagicStick",
@@ -26,11 +26,11 @@
   "license": "MIT",
   "pricing": "free",
   "source_repo": "https://github.com/natsume37/Blog-plugin-market",
-  "keywords": ["ai", "draft", "summary", "mcp", "editor"],
-  "tags": ["automation", "editor", "official"],
-  "features": ["AI 草稿", "AI 摘要", "MCP 工具", "模型配置"],
-  "capabilities": ["article_draft", "article_summary", "mcp_tools", "model_settings"],
-  "permissions": ["network", "site_settings"],
+  "keywords": ["ai", "draft", "summary", "mcp", "editor", "image", "prompt"],
+  "tags": ["automation", "editor", "media", "official"],
+  "features": ["AI 草稿", "AI 摘要", "AI 生图", "MCP 工具", "模型配置", "图库入库"],
+  "capabilities": ["article_draft", "article_summary", "mcp_tools", "model_settings", "image_generation", "resource_library"],
+  "permissions": ["network", "site_settings", "resource_write"],
   "compatibility": {
     "backend": "fastapi",
     "frontend": "vue",
@@ -43,5 +43,31 @@
     "install_strategy": "builtin-toggle",
     "runtime_type": "builtin",
     "entry_url": ""
-  }
+  },
+  "admin_pages": [
+    {
+      "key": "settings",
+      "path": "/admin/plugins/ai-assistant/settings",
+      "route_name": "plugin-ai-assistant-settings",
+      "title": "AI 助手",
+      "menu_label": "AI 助手",
+      "component_key": "plugin.ai.settings",
+      "icon": "MagicStick",
+      "render_mode": "local",
+      "entry_url": ""
+    },
+    {
+      "key": "images",
+      "path": "/admin/plugins/ai-assistant/images",
+      "route_name": "plugin-ai-assistant-images",
+      "title": "AI 生图",
+      "menu_label": "AI 生图",
+      "component_key": "plugin.ai.image",
+      "icon": "PictureFilled",
+      "render_mode": "local",
+      "entry_url": "",
+      "script_url": "",
+      "layout": "workspace"
+    }
+  ]
 }

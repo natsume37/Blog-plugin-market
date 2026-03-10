@@ -15,12 +15,6 @@
       "changelog_path": "plugins/ai-assistant/CHANGELOG.md"
     },
     {
-      "plugin_id": "ai-image-studio",
-      "manifest_path": "plugins/ai-image-studio/manifest.json",
-      "readme_path": "plugins/ai-image-studio/README.md",
-      "changelog_path": "plugins/ai-image-studio/CHANGELOG.md"
-    },
-    {
       "plugin_id": "wechat-official-account",
       "manifest_path": "plugins/wechat-official-account/manifest.json",
       "readme_path": "plugins/wechat-official-account/README.md",
