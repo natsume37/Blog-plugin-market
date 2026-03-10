@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "plugin_id": "wechat-official-account",
-  "name": "微信公众号发布",
-  "version": "1.0.0",
-  "description": "将博客文章同步到微信公众号草稿箱，并支持直接发起发布。",
-  "summary": "适合内容分发场景的公众号发布插件。",
+  "name": "微信公众号工作台",
+  "version": "2.0.0",
+  "description": "将博客文章同步到微信公众号草稿、微信图库、真群发和二维码工作流，并持续回写任务状态。",
+  "summary": "草稿、微信图库、预览发送、真群发、二维码和状态反馈的一体化公众号插件。",
   "category": "distribution",
   "source": "official-market",
   "icon": "Promotion",
@@ -26,11 +26,11 @@
   "license": "MIT",
   "pricing": "free",
   "source_repo": "https://github.com/natsume37/Blog-plugin-market",
-  "keywords": ["wechat", "distribution", "publish", "social"],
+  "keywords": ["wechat", "distribution", "publish", "social", "broadcast", "qrcode"],
   "tags": ["distribution", "social", "official"],
-  "features": ["草稿上传", "公众号发布", "封面同步", "发布状态查询"],
-  "capabilities": ["wechat_draft", "wechat_publish", "wechat_publish_status"],
-  "permissions": ["network", "article_content", "plugin_settings"],
+  "features": ["草稿管理", "微信图库", "预览发送", "真群发", "二维码", "状态反馈"],
+  "capabilities": ["wechat_draft", "wechat_material", "wechat_preview", "wechat_mass_send", "wechat_qrcode", "wechat_publish_status"],
+  "permissions": ["network", "article_content", "plugin_settings", "plugin_storage"],
   "compatibility": {
     "backend": "fastapi",
     "frontend": "vue",
@@ -43,5 +43,80 @@
     "install_strategy": "builtin-toggle",
     "runtime_type": "builtin",
     "entry_url": ""
-  }
+  },
+  "admin_pages": [
+    {
+      "key": "publisher",
+      "path": "/admin/plugins/wechat-official-account/publisher",
+      "route_name": "plugin-wechat-official-account-publisher",
+      "title": "公众号工作台",
+      "menu_label": "公众号工作台",
+      "component_key": "plugin.wechat.dashboard",
+      "icon": "Promotion",
+      "render_mode": "local",
+      "entry_url": "",
+      "script_url": "",
+      "layout": "workspace"
+    },
+    {
+      "key": "drafts",
+      "path": "/admin/plugins/wechat-official-account/drafts",
+      "route_name": "plugin-wechat-official-account-drafts",
+      "title": "公众号草稿",
+      "menu_label": "公众号草稿",
+      "component_key": "plugin.wechat.drafts",
+      "icon": "Document",
+      "render_mode": "local",
+      "entry_url": "",
+      "script_url": "",
+      "layout": "workspace"
+    },
+    {
+      "key": "media",
+      "path": "/admin/plugins/wechat-official-account/media",
+      "route_name": "plugin-wechat-official-account-media",
+      "title": "微信图库",
+      "menu_label": "微信图库",
+      "component_key": "plugin.wechat.media",
+      "icon": "PictureFilled",
+      "render_mode": "local",
+      "entry_url": "",
+      "script_url": "",
+      "layout": "workspace"
+    },
+    {
+      "key": "broadcast",
+      "path": "/admin/plugins/wechat-official-account/broadcast",
+      "route_name": "plugin-wechat-official-account-broadcast",
+      "title": "群发中心",
+      "menu_label": "群发中心",
+      "component_key": "plugin.wechat.broadcast",
+      "icon": "Connection",
+      "render_mode": "local",
+      "entry_url": "",
+      "script_url": "",
+      "layout": "workspace"
+    },
+    {
+      "key": "qrcodes",
+      "path": "/admin/plugins/wechat-official-account/qrcodes",
+      "route_name": "plugin-wechat-official-account-qrcodes",
+      "title": "二维码",
+      "menu_label": "二维码",
+      "component_key": "plugin.wechat.qrcode",
+      "icon": "Tickets",
+      "render_mode": "local",
+      "entry_url": "",
+      "script_url": "",
+      "layout": "workspace"
+    }
+  ],
+  "actions": [
+    { "name": "publish_article", "label": "同步文章", "description": "把站内文章同步到微信草稿或直接送审发布。" },
+    { "name": "list_drafts", "label": "草稿列表", "description": "分页获取公众号草稿。" },
+    { "name": "list_materials", "label": "图库列表", "description": "分页获取微信永久图片素材。" },
+    { "name": "preview_broadcast", "label": "预览发送", "description": "将图文预览发送到指定微信号或 OpenID。" },
+    { "name": "send_broadcast", "label": "群发消息", "description": "按全部粉丝或标签发起真群发。" },
+    { "name": "create_qrcode", "label": "生成二维码", "description": "生成临时或永久二维码。" }
+  ]
 }
