@@ -48,6 +48,7 @@
         "type": { "type": "string", "maxLength": 30 },
         "entry_mode": { "type": "string", "maxLength": 30 },
         "install_strategy": { "type": "string", "maxLength": 40 },
+        "runtime_type": { "type": "string", "maxLength": 40 },
         "entry_url": { "type": "string", "maxLength": 500 }
       },
       "additionalProperties": false
@@ -86,7 +87,9 @@
           "component_key": { "type": "string", "maxLength": 100 },
           "icon": { "type": "string", "maxLength": 50 },
           "render_mode": { "type": "string", "maxLength": 30 },
-          "entry_url": { "type": "string", "maxLength": 500 }
+          "entry_url": { "type": "string", "maxLength": 500 },
+          "script_url": { "type": "string", "maxLength": 500 },
+          "layout": { "type": "string", "maxLength": 30 }
         },
         "additionalProperties": false
       }

@@ -43,5 +43,20 @@
     "install_strategy": "catalog",
     "runtime_type": "catalog",
     "entry_url": ""
-  }
+  },
+  "admin_pages": [
+    {
+      "key": "overview",
+      "path": "/admin/plugins/your-plugin-id/overview",
+      "route_name": "plugin-your-plugin-id-overview",
+      "title": "插件页面",
+      "menu_label": "插件页面",
+      "component_key": "plugin.your-plugin.page",
+      "icon": "Grid",
+      "render_mode": "local",
+      "entry_url": "",
+      "script_url": "",
+      "layout": "panel"
+    }
+  ]
 }

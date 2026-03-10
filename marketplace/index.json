@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-10T22:00:00+08:00",
+  "generated_at": "2026-03-10T22:31:27+08:00",
   "marketplace": {
     "name": "Blog Plugin Market",
     "repo": "natsume37/Blog-plugin-market",
@@ -13,6 +13,12 @@
       "manifest_path": "../plugins/ai-assistant/manifest.json",
       "readme_path": "../plugins/ai-assistant/README.md",
       "changelog_path": "../plugins/ai-assistant/CHANGELOG.md"
+    },
+    {
+      "plugin_id": "ai-image-studio",
+      "manifest_path": "../plugins/ai-image-studio/manifest.json",
+      "readme_path": "../plugins/ai-image-studio/README.md",
+      "changelog_path": "../plugins/ai-image-studio/CHANGELOG.md"
     },
     {
       "plugin_id": "wechat-official-account",

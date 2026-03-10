@@ -47,6 +47,25 @@
         "runtime_type": { "type": "string" },
         "entry_url": { "type": "string" }
       }
+    },
+    "admin_pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "path": { "type": "string" },
+          "route_name": { "type": "string" },
+          "title": { "type": "string" },
+          "menu_label": { "type": "string" },
+          "component_key": { "type": "string" },
+          "icon": { "type": "string" },
+          "render_mode": { "type": "string" },
+          "entry_url": { "type": "string" },
+          "script_url": { "type": "string" },
+          "layout": { "type": "string" }
+        }
+      }
     }
   }
 }
