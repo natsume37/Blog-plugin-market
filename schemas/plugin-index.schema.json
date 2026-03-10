@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/natsume37/Blog-plugin-market/main/schemas/plugin-index.schema.json",
+  "title": "Blog Plugin Marketplace Index",
+  "type": "object",
+  "required": ["schema_version", "plugins"],
+  "properties": {
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "generated_at": { "type": "string", "maxLength": 60 },
+    "marketplace": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "maxLength": 100 },
+        "repo": { "type": "string", "maxLength": 200 },
+        "branch": { "type": "string", "maxLength": 50 },
+        "source": { "type": "string", "maxLength": 30 }
+      },
+      "additionalProperties": true
+    },
+    "plugins": {
+      "type": "array",
+      "items": { "$ref": "./plugin-manifest.schema.json" }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/natsume37/Blog-plugin-market/main/schemas/plugin-manifest.schema.json",
+  "title": "Blog Plugin Manifest",
+  "type": "object",
+  "required": ["plugin_id", "name", "version", "category", "delivery"],
+  "properties": {
+    "plugin_id": { "type": "string", "minLength": 2, "maxLength": 100 },
+    "name": { "type": "string", "minLength": 1, "maxLength": 100 },
+    "summary": { "type": "string", "maxLength": 300 },
+    "description": { "type": "string", "maxLength": 1000 },
+    "version": { "type": "string", "minLength": 1, "maxLength": 50 },
+    "latest_version": { "type": "string", "maxLength": 50 },
+    "category": { "type": "string", "maxLength": 50 },
+    "source": { "type": "string", "maxLength": 50 },
+    "source_repo": { "type": "string", "maxLength": 200 },
+    "author": { "type": "string", "maxLength": 100 },
+    "icon": { "type": "string", "maxLength": 50 },
+    "official": { "type": "boolean" },
+    "verified": { "type": "boolean" },
+    "builtin": { "type": "boolean" },
+    "installable": { "type": "boolean" },
+    "activatable": { "type": "boolean" },
+    "license": { "type": "string", "maxLength": 50 },
+    "pricing": { "type": "string", "maxLength": 30 },
+    "published_at": { "type": "string", "maxLength": 60 },
+    "homepage": { "type": "string", "maxLength": 500 },
+    "repo_url": { "type": "string", "maxLength": 500 },
+    "docs_url": { "type": "string", "maxLength": 500 },
+    "support_url": { "type": "string", "maxLength": 500 },
+    "changelog_url": { "type": "string", "maxLength": 500 },
+    "manifest_url": { "type": "string", "maxLength": 500 },
+    "tags": { "type": "array", "items": { "type": "string", "maxLength": 40 } },
+    "features": { "type": "array", "items": { "type": "string", "maxLength": 80 } },
+    "permissions": { "type": "array", "items": { "type": "string", "maxLength": 80 } },
+    "compatibility": {
+      "type": "object",
+      "properties": {
+        "backend": { "type": "string", "maxLength": 40 },
+        "frontend": { "type": "string", "maxLength": 40 }
+      },
+      "additionalProperties": false
+    },
+    "delivery": {
+      "type": "object",
+      "required": ["type", "entry_mode", "install_strategy"],
+      "properties": {
+        "type": { "type": "string", "maxLength": 30 },
+        "entry_mode": { "type": "string", "maxLength": 30 },
+        "install_strategy": { "type": "string", "maxLength": 40 },
+        "entry_url": { "type": "string", "maxLength": 500 }
+      },
+      "additionalProperties": false
+    },
+    "publisher": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "maxLength": 100 },
+        "url": { "type": "string", "maxLength": 500 }
+      },
+      "additionalProperties": false
+    },
+    "screenshots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["url"],
+        "properties": {
+          "label": { "type": "string", "maxLength": 80 },
+          "url": { "type": "string", "maxLength": 500 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "admin_pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "path", "title", "menu_label"],
+        "properties": {
+          "key": { "type": "string", "maxLength": 50 },
+          "path": { "type": "string", "maxLength": 200 },
+          "route_name": { "type": "string", "maxLength": 100 },
+          "title": { "type": "string", "maxLength": 100 },
+          "menu_label": { "type": "string", "maxLength": 100 },
+          "component_key": { "type": "string", "maxLength": 100 },
+          "icon": { "type": "string", "maxLength": 50 },
+          "render_mode": { "type": "string", "maxLength": 30 },
+          "entry_url": { "type": "string", "maxLength": 500 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": true
+}

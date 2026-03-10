@@ -1,0 +1,46 @@
+{
+  "plugin_id": "friend-link-toolkit",
+  "name": "友链工具箱",
+  "summary": "面向友链申请、站点资料抽取和审核流的工具包入口。",
+  "description": "提供友链资料抽取、内容标准化和后续审核工作流所需的元数据定义。当前版本先以市场条目的方式分发，便于后续扩展远程工具包。",
+  "version": "0.1.0",
+  "latest_version": "0.1.0",
+  "category": "tools",
+  "source": "github-market",
+  "source_repo": "natsume37/Blog-plugin-market",
+  "author": "Martin",
+  "icon": "Connection",
+  "official": true,
+  "verified": true,
+  "builtin": false,
+  "installable": false,
+  "activatable": false,
+  "license": "MIT",
+  "pricing": "free",
+  "published_at": "2026-03-10T00:00:00Z",
+  "homepage": "https://github.com/natsume37/Blog-plugin-market",
+  "repo_url": "https://github.com/natsume37/Blog-plugin-market",
+  "docs_url": "https://github.com/natsume37/Blog-plugin-market/blob/main/plugins/friend-link-toolkit.json",
+  "support_url": "https://github.com/natsume37/Blog-plugin-market/issues",
+  "changelog_url": "https://github.com/natsume37/Blog-plugin-market/commits/main",
+  "manifest_url": "https://raw.githubusercontent.com/natsume37/Blog-plugin-market/main/plugins/friend-link-toolkit.json",
+  "tags": ["tools", "friend-links", "workflow"],
+  "features": ["资料抽取", "字段标准化", "审核工作流"],
+  "permissions": ["friend-link:read", "friend-link:write"],
+  "compatibility": {
+    "backend": ">=1.0.0",
+    "frontend": ">=1.0.0"
+  },
+  "delivery": {
+    "type": "manifest",
+    "entry_mode": "external",
+    "install_strategy": "manual",
+    "entry_url": "https://github.com/natsume37/Blog-plugin-market/blob/main/plugins/friend-link-toolkit.json"
+  },
+  "publisher": {
+    "name": "Martin",
+    "url": "https://github.com/natsume37"
+  },
+  "screenshots": [],
+  "admin_pages": []
+}
